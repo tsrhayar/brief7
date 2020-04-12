@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!-- H E A D E R -->
+
+    <header>
+      <div class="navbar-class">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="/" id="logo">YouCar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" style="margin-left: auto;">
+              <a class="nav-item nav-link active" href="/"
+                >Acceuil<span class="sr-only">(current)</span></a
+              >
+              <a class="nav-item nav-link" href="#notre-voitures">Notre voitures</a>
+              <a class="nav-item nav-link" href="/reservation">Réservetion</a>
+              <a class="nav-item nav-link" href="/inscription">Inscription</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="header-class">
+        <div class="header-class2">
+          <h1>YouCar <span>location de voitures</span></h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="blank"></div>
+
+    <!-- A S I D E -->
+
+    <aside>
+      <div class="voitures-class">
+        <div class="voitures-class-title" id="notre-voitures">
+          <h1>Notre voitures</h1>
+          <div class="bar-title"></div>
+        </div>
+      </div>
+      <div class="blank"></div>
+      <div class="notre-voitures">
+        <%if (json.length > 0) {%> <%for(i in json) {%>
+        <div class="produit">
+          <div class="produit-bar1">
+            <img src="img/<%= json[i].name%>.png" alt="">
+          </div>
+          <div class="produit-bar2">
+            <h1><%= json[i].name%></h1>
+            <h2>Carburant: <span><%= json[i].carburant%></span></h2>
+            <h2>Climatisation: <span><%= json[i].climatisation%></span></h2>
+            <h2>Prix : <span><%= json[i].price%> DH</span></h2>
+          </div>
+          <div class="produit-bar3">
+            <button id="mdf-btn" data-toggle="modal" data-target="#myModal" id="rvn" onclick="get(this)" name="<%= json[i].id %>" > Modifier la voiture</button>
+            <button class="buton" id="dlt-btn">
+              <a href="/delete/<%=json[i].id%>" >Supprimer la voiture</a>
+            </button>
+          </div>
+          </div>
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h1 class="modal-title">Modifier la voiture</h1>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <!-- Modal body -->
+                 
+                <div class="modal-body">
+                  <form action="/up" method="post">
+                    <div class="form-group">
+                      <input type="hidden" id="vv" name="id" value="" >
+                      <label for="exampleInputPassword1">Nom de la voiture</label>
+                      <select name="name" class="form-control" id="validationServer02" required="on">
+                        <option value="Dacia-duster">Dacia-duster</option>
+                        <option value="Dacia-Logan">Dacia-Logan</option>
+                        <option value="Fiat-Punto">Fiat-Punto</option>
+                        <option value="Hundai-i10">Hundai-i10</option>
+                      </select>
+                      <!-- <input class="form-control"  class="form-control is-valid" name="name" required="on" value="<%=json.name%>"> -->
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Carburant</label>
+                      <select name="carburant" class="form-control" id="validationServer02" required >
+                        <option value="Diesel">Diesel</option>
+                        <option value="Essence">Essence</option>
+                      </select>
+                      <!-- <input class="form-control" class="form-control is-valid" name="carburant" id="title" required="on" value="<%=json.carburant%>"> -->
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Climatisation</label>
+                      <select name="climatisation" class="form-control" id="validationServer02" required="on">
+                        <option value="Oui">Oui</option>
+                        <option value="Non">Non</option>
+                      </select>
+                      <!-- <input class="form-control" class="form-control is-valid" name="climatisation" id="author" required="on" value="<%=json.climatisation%>"> -->
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Prix</label>
+                      <input class="form-control" class="form-control is-valid" name="price" id="author" required="on" value="<%=json.price%>">
+                    </div>
+                    <button type="submit" id="mdf-btn">Modifier</button>
+                  </div>
+                </form>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" id="dlt-btn" data-dismiss="modal">Fermer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <%}%> <%}%>
+          
+          <div class="form-ajt-voiture">
+            <img src="" alt="">
+            <form action="/" method="post">
+              
+              <div class="form-input">
+                <h1>Ajouter une voiture</h1>
+                <input type="text" name="id"            class="form-control" id="validationServer02" value="<%=Number(json[i].id)+1%>" required style="display: none;"/>
+                <label for="name">Nom de la voiture</label>
+                <!-- <input type="text" name="name"          class="form-control" id="validationServer02" placeholder="Nom de la voiture"              required /> -->
+                <select name="name" class="form-control" id="validationServer02" required>
+                  <option value="Dacia-duster">Dacia-duster</option>
+                  <option value="Dacia-Logan">Dacia-Logan</option>
+                  <option value="Fiat-Punto">Fiat-Punto</option>
+                  <option value="Hundai-i10">Hundai-i10</option>
+                </select>
+                <label for="carburant">Genre de carburant</label>
+                <select name="carburant" class="form-control" id="validationServer02" required >
+                  <option value="Diesel">Diesel</option>
+                  <option value="Essence">Essence</option>
+                </select>
+                <!-- <input type="text" name="carburant"     class="form-control" id="validationServer02" placeholder="Genre de carburant"             required /> -->
+                <label for="climatisation">Climatisation</label>
+                <select name="climatisation" class="form-control" id="validationServer02" required>
+                  <option value="Oui">Oui</option>
+                  <option value="Non">Non</option>
+                </select>
+                <!-- <input type="text" name="climatisation" class="form-control" id="validationServer02" placeholder="La climatisation disponible?"   required /> -->
+                <label for="price">Prix</label>
+                <input type="number" name="price"         class="form-control" id="validationServer02" placeholder="Enter le prix de location"      required />
+                <button class="buton" type="submit">Ajouter la voiture</button>
+              </div>
+            </form>
+          </div>
+    </aside>
+
+    <div class="blank"></div>
+
+    <!-- F O O T E R -->
+
+    <footer>
+      <div class="footer-class">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm">
+              <h1>YouCar</h1>
+            </div>
+            <div class="col-sm">
+              <img src="img/rental-car.svg" alt="">
+            </div>
+            <div class="col-sm">
+              <div class="footer-class2">
+                <div>
+                  <h1 id="sn">Suivez nous</h1>
+                </div>
+                <div>
+                  <img src="img/facebook.svg" alt="" id="rs">
+                  <img src="img/instagram.svg" alt="" id="rs">
+                  <img src="img/whatsapp.svg" alt="" id="rs">
+                  <!-- <img src="" alt="" id="rs"> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      var cc = document.getElementById("vv");
+      function get(ev) {
+        let bn = ev.name;
+        cc.value = bn;
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "3",
+    "name": "Dacia-Logan",
+    "carburant": "essence",
+    "climatisation": "non",
+    "price": "200 dh"
+  },
+  {
+    "id": "4",
+    "name": "Dacia-duster",
+    "carburant": "Diesel",
+    "climatisation": "Oui",
+    "price": "350"
+  }
+]

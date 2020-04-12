@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #feffff;
+  font-family: "Baloo Paaji 2", cursive;
+}
+
+body .blank {
+  height: 20px;
+}
+
+header #logo {
+  font-size: 30px;
+}
+
+header .navbar-class {
+  background-color: #17252a;
+}
+
+header .navbar {
+  width: 90%;
+  margin: auto;
+}
+
+header .bg-dark {
+  background-color: #17252a !important;
+}
+
+header .bg-dark .navbar-brand {
+  color: #feffff !important;
+}
+
+header .navbar-dark .navbar-nav .nav-link {
+  color: #feffff !important;
+}
+
+header .navbar-toggler {
+  color: #feffff;
+}
+
+header .header-class {
+  background-color: #def2f1;
+  background-position: center;
+  background-size: cover;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-class h1 {
+  color: #17252a;
+  font-size: 50px;
+}
+
+header .header-class h1 span {
+  color: #2b7a78;
+}
+
+aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+aside .voitures-class {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  margin: auto;
+}
+
+aside .voitures-class .voitures-class-title h1 {
+  margin-bottom: 0px;
+}
+
+aside .bar-title {
+  background-color: #2b7a78;
+  height: 4px;
+  width: 200px;
+}
+
+aside .notre-voitures {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+aside .notre-voitures .produit {
+  height: 500px;
+  width: 330px;
+  margin: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1), 0 0px 0px 0 rgba(56, 38, 38, 0.19);
+          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1), 0 0px 0px 0 rgba(56, 38, 38, 0.19);
+}
+
+aside .notre-voitures .produit .produit-bar1 {
+  height: 40%;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+aside .notre-voitures .produit .produit-bar1 img {
+  width: 100%;
+}
+
+aside .notre-voitures .produit .produit-bar2 {
+  height: 40%;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+aside .notre-voitures .produit .produit-bar2 h1 {
+  color: #2b7a78;
+  text-align: center;
+}
+
+aside .notre-voitures .produit .produit-bar2 h2 {
+  color: #17252a;
+}
+
+aside .notre-voitures .produit .produit-bar2 h2 span {
+  color: #2b7a78;
+}
+
+aside .notre-voitures .produit .produit-bar3 {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+aside .notre-voitures .form-ajt-voiture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 280px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 330px;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1), 0 0px 0px 0 rgba(56, 38, 38, 0.19);
+          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1), 0 0px 0px 0 rgba(56, 38, 38, 0.19);
+}
+
+aside .notre-voitures .form-ajt-voiture form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+aside .notre-voitures .form-ajt-voiture form .form-input {
+  padding: 20px;
+}
+
+aside .notre-voitures .form-ajt-voiture form .form-input h1 {
+  color: #2b7a78;
+  font-size: 30px;
+  text-align: center;
+}
+
+aside .notre-voitures .form-ajt-voiture form .form-input select {
+  margin-bottom: 20px;
+}
+
+aside .notre-voitures .form-ajt-voiture form .form-input input {
+  margin-bottom: 20px;
+}
+
+aside .notre-voitures .form-ajt-voiture form .form-input button {
+  border-radius: 10px;
+  background-color: #2b7a78;
+  border: none;
+  color: white;
+  padding: 05px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+aside #mdf-btn {
+  background-color: #2b7a78;
+  border: none;
+  color: white;
+  padding: 05px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+aside #dlt-btn {
+  background-color: #17252a;
+  border: none;
+  color: white;
+  padding: 05px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+}
+
+aside #dlt-btn a {
+  color: #feffff;
+}
+
+footer {
+  background-color: #def2f1;
+}
+
+footer .footer-class {
+  width: 90%;
+  margin: auto;
+}
+
+footer .footer-class .col-sm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0px;
+}
+
+footer .footer-class .col-sm h1 {
+  color: #17252a;
+  font-size: 40px;
+}
+
+footer .footer-class .col-sm img {
+  height: 100px;
+}
+
+footer .footer-class2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-class2 #rs {
+  margin: 5px;
+  height: 40px;
+}
+
+footer .footer-class2 #sn {
+  font-size: 30px;
+}
+
+.votre-reservation {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.votre-reservation #form-reservation {
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1), 0 0px 0px 0 rgba(56, 38, 38, 0.19);
+          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1), 0 0px 0px 0 rgba(56, 38, 38, 0.19);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.votre-reservation #form-reservation button {
+  border-radius: 10px;
+  background-color: #2b7a78;
+  border: none;
+  color: white;
+  padding: 05px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.votre-reservation .reservation-class {
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1), 0 0px 0px 0 rgba(56, 38, 38, 0.19);
+          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1), 0 0px 0px 0 rgba(56, 38, 38, 0.19);
+}
+
+.votre-reservation .reservation-class .reservation-bar1 {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+}
+
+.votre-reservation .reservation-class .reservation-bar1 img {
+  width: 100%;
+}
+
+.votre-reservation .reservation-class .reservation-bar2 {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.votre-reservation .reservation-class .reservation-bar2 h2 {
+  font-size: 24px;
+}
+
+.votre-reservation .reservation-class .reservation-bar2 h2 span {
+  color: #2b7a78;
+}
+
+.votre-reservation .reservation-class .reservation-bar3 {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+}
+
+@media (max-width: 991px) {
+  .header-class .header-class2 {
+    width: 90%;
+    margin: auto;
+  }
+  .header-class h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header-class h1 span {
+    text-align: center;
+  }
+  .votre-reservation .reservation-class {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .votre-reservation .reservation-class .reservation-bar1 {
+    width: 100%;
+  }
+  .votre-reservation .reservation-class .reservation-bar1 img {
+    width: 60%;
+  }
+  .votre-reservation .reservation-class .reservation-bar2 {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .votre-reservation .reservation-class .reservation-bar3 {
+    width: 60%;
+  }
+}
+
+@media (max-width: 400px) {
+  aside .notre-voitures .produit .produit-bar2 h2 {
+    font-size: 25px;
+  }
+  .votre-reservation .reservation-class .reservation-bar1 img {
+    width: 80%;
+  }
+  .votre-reservation .reservation-class .reservation-bar2 {
+    padding: 0 20px;
+  }
+  .votre-reservation .reservation-class .reservation-bar3 {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Réservation</title>
+  </head>
+  <body>
+
+    <!-- H E A D E R -->
+
+    <header>
+      <div class="navbar-class">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="/" id="logo">YouCar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" style="margin-left: auto;">
+              <a class="nav-item nav-link active" href="/"
+                >Acceuil<span class="sr-only">(current)</span></a
+              >
+              <!-- <a class="nav-item nav-link" href="#notre-voitures">Notre voitures</a> -->
+              <a class="nav-item nav-link" href="/reservation">Réservetion</a>
+              <a class="nav-item nav-link" href="/inscription">Inscription</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="header-class">
+        <div class="header-class2">
+          <h1>YouCar <span>location de voitures</span></h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="blank"></div>
+
+    <!-- A S I D E -->
+
+    <aside>
+      <div class="blank"></div>
+      <div class="voitures-class">
+        <div class="voitures-class-title" id="notre-voitures">
+          <h1>Réservation</h1>
+          <div class="bar-title"></div>
+        </div>
+        
+      </div>
+      <%if (json2.length > 0) {%> <%for(i in json2) {%>
+        <%}%> <%}%>
+      <div class="votre-reservation">
+        <div class="blank"></div>
+        <div class="form-ajt-voiture" id="form-reservation">
+          <form action="/reservation" method="post">
+            <div class="form-input">
+              <h1>Passer une commande</h1>
+              <input type="text" name="id"            class="form-control" id="validationServer02" value="<%=Number(json2[i].id)+1%>" required style="display: none;"/>
+              <label for="nameClient">Nom & Prénom</label>
+              <input type="text" name="nameClient" placeholder="Ecrire votre nom et prénom"            class="form-control" id="validationServer02"  required >
+              <label for="nameCar">Nom de la voiture</label>
+              <!-- <input type="text" name="name"          class="form-control" id="validationServer02" placeholder="Nom de la voiture"              required /> -->
+              <select name="nameCar" class="form-control" id="validationServer02" required>
+                <%if (json.length > 0) {%> <%for(i in json) {%>
+                <option value="<%=json[i].name%>"><%=json[i].name%></option>
+                <%}%> <%}%>
+              </select>
+              <label for="carburant">La durrée</label>
+              <input type="number" name="numberDay"  class="form-control" id="validationServer02" placeholder="Enter la durrée de location" min="1"  required>
+              <!-- <input type="text" name="climatisation" class="form-control" id="validationServer02" placeholder="La climatisation disponible?"   required /> -->
+              <label for="price">Nombre de personne</label>
+              <input type="number" name="numberPersone"         class="form-control" id="validationServer02" placeholder="Enter le nombre des personne" min="1"   max="6"   required />
+              <button class="buton" type="submit" id="cnfrm-commande">Confirmer la commande</button>
+            </div>
+          </form>
+        </div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="voitures-class-title" id="notre-voitures">
+          <h1>Liste de(s) réservation(s)</h1>
+          <div class="bar-title"></div>
+        </div>
+        <div class="blank"></div>
+        <%if (json2.length > 0) {%> <%for(i in json2) {%>
+              
+        <div class="reservation-class">
+          <div class="reservation-bar1">
+            <img src="img/<%= json2[i].nameCar%>.png" alt="">
+          </div>
+          <div class="reservation-bar2">
+            <h2>Bienvenue <span><%= json2[i].nameClient%>,</span></h2>
+            <h2>Voilà les informations de votre commande :</h2>
+            <h2>La voiture est: <span><%= json2[i].nameCar%></span></h2>
+            <h2>La durrée: <span><%= json2[i].numberDay%> jour(s)</span></h2>
+            <h2>Nombre de persone est: <span><%= json2[i].numberPersone%> personnes</span></h2>
+          </div>
+          <div class="reservation-bar3">
+            <button id="mdf-btn" data-toggle="modal" data-target="#myModal" id="rvn" onclick="get(this)" name="<%= json2[i].id %>" > Modifier la resérvation</button>
+            <button class="buton" id="dlt-btn">
+              <a href="/delete-reservation/<%=json2[i].id%>" >Supprimer la resérvation</a>
+            </button>
+          </div>
+          </div>
+          <div class="blank"></div>
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h1 class="modal-title">Modifier votre resérvation</h1>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <!-- Modal body -->
+                 
+                <div class="modal-body">
+                  <form action="/up-reservation/<%=json2[i].id%>" method="post">
+                    <div class="form-group">
+                      <label for="exampleInputPassword1" >Nom et Prénom</label>
+                      <input type="text" name="nameClient" class="form-control" class="form-control is-valid" placeholder="Ecrire votre nom et prénom" id="author" required="on">
+                    </div>
+                    <div class="form-group">
+                      <input type="hidden" id="vv" name="id" value="" >
+                      <label for="exampleInputPassword1">Nom de la voiture</label>
+                      <select name="nameCar" class="form-control" id="validationServer02" required="on">
+                        <option value="">-- Choisi la voiture --</option>
+                        <%if (json.length > 0) {%> <%for(i in json) {%>
+                        <option value="<%=json[i].name%>"><%=json[i].name%></option>
+                        <%}%> <%}%>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">La durrée</label>
+                      <input type="number" class="form-control" class="form-control is-valid" name="numberDay" id="author" placeholder="Enter la durrée de location" min="1" required="on">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Nombre de personne</label>
+                      <input type="number" class="form-control" class="form-control is-valid" placeholder="Enter le nombre des personne" min="1"   max="6" name="numberPersone" id="author" required="on">
+                    </div>
+                    <button type="submit" id="mdf-btn">Modifier</button>
+                  </div>
+                </form>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" id="dlt-btn" data-dismiss="modal">Fermer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <%}%> <%}%>
+          <!-- The Modal -->
+          
+         
+    </aside>
+
+    <div class="blank"></div>
+
+    <!-- F O O T E R -->
+
+    <footer>
+      <div class="footer-class">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm">
+              <h1>YouCar</h1>
+            </div>
+            <div class="col-sm">
+              <img src="img/rental-car.svg" alt="">
+            </div>
+            <div class="col-sm">
+              <div class="footer-class2">
+                <div>
+                  <h1 id="sn">Suivez nous</h1>
+                </div>
+                <div>
+                  <img src="img/facebook.svg" alt="" id="rs">
+                  <img src="img/instagram.svg" alt="" id="rs">
+                  <img src="img/whatsapp.svg" alt="" id="rs">
+                  <!-- <img src="" alt="" id="rs"> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      var cc = document.getElementById("vv");
+      function get(ev) {
+        let bn = ev.name;
+        cc.value = bn;
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script></script>
+  </body>
+</html>

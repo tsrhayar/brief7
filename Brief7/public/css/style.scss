@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap");
+
+$color1: #17252a;
+$color2: #2b7a78;
+$color3: #3aafa9;
+$color4: #def2f1;
+$color5: #feffff;
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: $color5;
+  font-family: "Baloo Paaji 2", cursive;
+  .blank {
+    height: 20px;
+  }
+}
+
+header {
+  #logo {
+    font-size: 30px;
+  }
+  .navbar-class {
+    background-color: $color1;
+  }
+  .navbar {
+    width: 90%;
+    margin: auto;
+  }
+  .bg-dark {
+    background-color: $color1 !important;
+    .navbar-brand {
+      color: $color5 !important;
+    }
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    color: $color5 !important;
+  }
+  .navbar-toggler {
+    color: $color5;
+  }
+  .header-class {
+    background-color: $color4;
+    // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+    // url(../img/road.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      color: $color1;
+      font-size: 50px;
+      span {
+        color: $color2;
+      }
+    }
+  }
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .voitures-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    .voitures-class-title {
+      h1 {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .bar-title {
+    background-color: $color2;
+    height: 4px;
+    width: 200px;
+  }
+  .notre-voitures {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .produit {
+      height: 500px;
+      width: 330px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+        0 0px 0px 0 rgba(56, 38, 38, 0.19);
+      .produit-bar1 {
+        height: 40%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        img {
+          width: 100%;
+        }
+      }
+      .produit-bar2 {
+        height: 40%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+          color: $color2;
+          text-align: center;
+        }
+        h2 {
+          color: $color1;
+          span {
+            color: $color2;
+          }
+        }
+      }
+      .produit-bar3 {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        justify-content: center;
+        // align-items: center;
+      }
+    }
+    .form-ajt-voiture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 280px;
+      margin: 10px;
+      border-radius: 10px;
+      width: 330px;
+      box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+        0 0px 0px 0 rgba(56, 38, 38, 0.19);
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .form-input {
+          padding: 20px;
+          h1 {
+            color: $color2;
+            font-size: 30px;
+            text-align: center;
+          }
+          select {
+            margin-bottom: 20px;
+          }
+          input {
+            margin-bottom: 20px;
+          }
+          button {
+            border-radius: 10px;
+            background-color: $color2;
+            border: none;
+            color: white;
+            padding: 05px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  #mdf-btn {
+    background-color: $color2;
+    border: none;
+    color: white;
+    padding: 05px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 10px;
+  }
+  #dlt-btn {
+    background-color: $color1;
+    border: none;
+    color: white;
+    padding: 05px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    a {
+      color: $color5;
+    }
+  }
+}
+footer {
+  // height: 200px;
+  background-color: $color4;
+  .footer-class {
+    width: 90%;
+    margin: auto;
+    .col-sm {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0px;
+      h1 {
+        color: $color1;
+        font-size: 40px;
+      }
+      img {
+        height: 100px;
+      }
+    }
+  }
+  .footer-class2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #rs {
+      margin: 5px;
+      height: 40px;
+    }
+    #sn {
+      font-size: 30px;
+    }
+  }
+}
+
+//
+
+// R E S E R V A T I O N
+
+.votre-reservation {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  #form-reservation {
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+      0 0px 0px 0 rgba(56, 38, 38, 0.19);
+    padding: 20px;
+    border-radius: 10px;
+    button {
+      border-radius: 10px;
+      background-color: #2b7a78;
+      border: none;
+      color: white;
+      padding: 05px 0px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  .reservation-class {
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+      0 0px 0px 0 rgba(56, 38, 38, 0.19);
+    .reservation-bar1 {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      img {
+        width: 100%;
+      }
+    }
+    .reservation-bar2 {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 50%;
+      h2 {
+        font-size: 24px;
+        span {
+          color: $color2;
+        }
+      }
+    }
+    .reservation-bar3 {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 20%;
+    }
+  }
+}
+
+// M E D I A
+
+@media (max-width: 991px) {
+  .header-class {
+    .header-class2 {
+      width: 90%;
+      margin: auto;
+    }
+    h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      span {
+        text-align: center;
+      }
+    }
+  }
+  .votre-reservation {
+    .reservation-class {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .reservation-bar1 {
+        width: 100%;
+        img {
+          width: 60%;
+        }
+      }
+      .reservation-bar2 {
+        width: 100%;
+        padding: 0 30px;
+      }
+      .reservation-bar3 {
+        width: 60%;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  aside {
+    .notre-voitures {
+      .produit {
+        .produit-bar2 {
+          h2 {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+  .votre-reservation {
+    .reservation-class {
+      .reservation-bar1 {
+        img {
+          width: 80%;
+        }
+      }
+      .reservation-bar2 {
+        padding: 0 20px;
+      }
+      .reservation-bar3 {
+        width: 80%;
+      }
+    }
+  }
+}
